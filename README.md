@@ -30,3 +30,16 @@ graph TD
     D --> E[Cliente responde formulário]
     E --> F[(Salvar feedback no Supabase)]
     F --> G[Enviar e-mail de confirmação ao cliente]
+## 📌 Regras Importantes
+
+### 🚫 Restrições
+* **E-mails Inválidos:** Ignorar registros sem e-mail cadastrado ou com formato inválido.
+* **Opt-out / Anti-spam:** Ignorar clientes que optaram por não receber e-mails/comunicações da loja.
+
+### ✅ Validações
+* **Validação de Contato:** Validar a integridade do e-mail antes de realizar o disparo.
+* **Status de Pós-Venda:** Validar se o cliente não solicitou troca ou devolução do produto adquirido.
+* **Confirmação de Persistência:** Validar se o banco de dados recebeu e salvou as informações corretamente antes de disparar o e-mail de confirmação.
+
+### ⚠️ Exceções
+* **Itens Não Avaliáveis:** Não enviar perguntas sobre produtos entregues como brinde ou amostras grátis.
