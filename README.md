@@ -30,6 +30,8 @@ graph TD
     D --> E[Cliente responde formulário]
     E --> F[(Salvar feedback no Supabase)]
     F --> G[Enviar e-mail de confirmação ao cliente]
+```
+
 ## 📌 Regras Importantes
 
 ### 🚫 Restrições
